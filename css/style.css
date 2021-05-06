@@ -1,0 +1,249 @@
+/*Обнуление*/
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*,
+*:before,
+*:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus,
+:active {
+    outline: none;
+}
+
+a:focus,
+a:active {
+    outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+    display: block;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 16px;
+    background-color: #0b1d26;
+    color: white;
+
+    font-family: 'PT Sans';
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input,
+button,
+textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a,
+a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+
+/*--------------------*/
+.wrapper {
+    min-height: 100%;
+}
+.parallax {
+    min-height: 100vh;
+}
+.parallax__body {
+
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+
+}
+.parallax__container {
+text-transform: uppercase;
+position: relative;
+
+z-index: 2;
+
+}
+._container {
+
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px    20px;
+}
+.parallax__label {
+    color: bisque;
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    letter-spacing: 6px;
+    margin: 0 0 30px 0;
+}
+
+
+.parallax__label::before {
+content: "";
+flex: 0 0 70px;
+margin: 0 30px 0 0;
+background-color: bisque;
+height: 1px;
+}
+.parallax__title {
+    font-size: 88px;
+}
+.parallax__images {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 1;
+}
+.images-parallax {
+}
+.images-parallax__item {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    
+}
+
+.images-parallax__clouds,.images-parallax__mountains,.images-parallax__human  {
+
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+}
+ 
+
+
+.images-parallax__clouds {
+    background: url('../img/clouds.jpg') top / cover no-repeat;
+    top: 0;
+}
+.images-parallax__mountains {
+    background: url('../img/mountains.png') top / cover no-repeat;
+    top:15%;
+    z-index: 2;
+}
+.images-parallax__human {
+    background: url('../img/human.png') top / cover no-repeat;
+    top:45%;
+    z-index: 3;
+}
+@media (max-aspect-ratio:3/2) {
+    .images-parallax__human {
+        background-position: 20% top;   
+}
+}
+
+
+.content {
+    position: relative;
+    z-index: 2;
+    background-color: #0b1d26;
+}
+
+.content::before {
+pointer-events: none;
+    content: "";
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 300px;
+background: linear-gradient (180deg, rgba(11, 29, 38, 0) 5%, #0b1d26 100% );   
+
+background: linear-gradient(180deg, rgba(11, 29, 38, 0) 5%, #0b1d26 100% );   
+transform: translate(0px, -100%);
+
+}
+.content__container {
+}
+.content__title {
+    font-size: 35px;
+    margin: 0 0 30px 0;
+}
+.content__text {
+    font-size: 19px;
+  line-height: 150%;
+}
+.content__text p{
+  
+    margin: 0 0 30px 0;
+}
+@media (max-width: 767px) {
+    .parallax__title {
+        font-size: 50px;
+    }
+    .parallax__label {
+        font-size: 16px;
+        max-width: 0 0 15px 0;
+    }
+    
+}
+@media (max-width: 479px) {
+    .parallax__title {
+        font-size: 36px;
+    }
+    .parallax__label::before {
+        flex: 0 0 50px;
+        margin: 0 10px 0 0;
+    }
+    
+}
